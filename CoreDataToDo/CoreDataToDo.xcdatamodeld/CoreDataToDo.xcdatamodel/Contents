@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="12F37" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ToDoItem" representedClassName="ToDoItem" syncable="YES">
+        <attribute name="dueDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="task" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="list" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ToDoList" inverseName="items" inverseEntity="ToDoList" syncable="YES"/>
+    </entity>
+    <entity name="ToDoList" representedClassName="ToDoList">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ToDoItem" inverseName="list" inverseEntity="ToDoItem" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <elements>
+        <element name="ToDoList" positionX="261" positionY="189" width="128" height="73"/>
+        <element name="ToDoItem" positionX="430" positionY="191" width="128" height="88"/>
+    </elements>
+</model>
